@@ -1,0 +1,13 @@
+{
+  "id": 2,
+  "result": {
+    "access_token": "6263142a-b13e-4981-a7dd-b9256b2c11f5",
+    "access_secret": "tn2mEIh4M9YrNHZmmBy4DA==",
+    "expires_in": 1200,
+    "refresh_token": "29b0d5dd-1dcf-457e-b696-021897415cfb",
+    "refresh_secret": "us2XoIIigzVKzJuNBZl0mg==",
+    "token_type": "bearer",
+    "uuid": "5adc6df9-ca43-4158-9648-17c147affef7"
+  },
+  "time": 8
+}

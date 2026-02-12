@@ -1,0 +1,83 @@
+import requests
+cookies = {
+    'country_region': 'CA-ON',
+    's_fpid': 'fe13e161-5d2f-40a5-b67a-2d08d2c61cd2',
+    'AKA_A2': 'A',
+    'country_codes': 'us',
+    'device_type': 'pc',
+    '__COM_SPEED': 'H',
+    'at_check': 'true',
+    'utag_main': 'v_id:0194f0fe23b0001f90b93f11577905075006706d00942$_sn:1$_se:1$_ss:1$_st:1739211774705$ses_id:1739209974705%3Bexp-session$_pn:1%3Bexp-session',
+    'BVBRANDID': '6a6a807b-c4db-4139-b4f6-5054ae1193f0',
+    'BVBRANDSID': '1ae0c3eb-b9a8-4b03-a214-25248e6ed997',
+    's_ecid': 'MCMID%7C09895185294771669030220468481281979939',
+    'AMCVS_48855C6655783A647F000101%40AdobeOrg': '1',
+    'AMCV_48855C6655783A647F000101%40AdobeOrg': '1585540135%7CMCIDTS%7C20130%7CMCMID%7C09895185294771669030220468481281979939%7CMCAID%7CNONE%7CMCOPTOUT-1739217175s%7CNONE%7CMCAAMLH-1739814775%7C9%7CMCAAMB-1739814775%7Cj8Odv6LonN4r3an7LhD3WZrU1bUpAkFkkiY1ncBR96t2PTI%7CvVersion%7C4.4.0',
+    'mboxEdgeCluster': '35',
+    'cookie_country': 'us',
+    's_ips_aep': '684',
+    's_ppv_aep': 'https%253A%252F%252Fwww.samsung.com%252Fus%252F%2C5%2C5%2C684%2C1%2C18',
+    'kndctr_48855C6655783A647F000101_AdobeOrg_cluster': 'or2',
+    'kndctr_48855C6655783A647F000101_AdobeOrg_identity': 'CiYwOTg5NTE4NTI5NDc3MTY2OTAzMDIyMDQ2ODQ4MTI4MTk3OTkzOVIQCJfp-IfPMhgBKgNPUjIwA_ABl-n4h88y',
+    'mbox': 'session%23d974e972700d4ab994c331d4f260ccc0%231739211839%7CPC%23d974e972700d4ab994c331d4f260ccc0%2E35%5F0%231802454776',
+    'TEAL': 'v:0194f0fe35ce00072aef4dd3b50b05075001b06d00942samsung_live$t:1739211779580$s:1739209979579%3Bexp-sess$sn:1$en:1',
+    '_fbp': 'fb.1.1739209980902.164200471532868056',
+    '__idcontext': 'eyJjb29raWVJRCI6IjJzck54ZkZ1ZGxBdTh6YVdGb1V3UEhxV2ZWciIsImRldmljZUlEIjoiMnNyTnZtZ0xFajlXblk3Z3U2VjJaSFh3dENEIiwiaXYiOiIiLCJ2IjoiIn0%3D',
+    '_uetsid': 'defcb040e7d711efab5001ff7122e512',
+    '_uetvid': 'defcccf0e7d711ef91e4fd9f0a6acb30',
+    '_gcl_au': '1.1.1071940906.1739209982',
+    'tapid_reset': 'true',
+    'da_sid': 'D9E8F5B68E96AE8BEB09AA13A0A6865260.0|4|0|3',
+    'da_lid': 'EADBC6859AD6EA107E58BB99E2A4CC59D3|0|0|0',
+    'da_intState': '',
+    'iadvize-6528-vuid': '0312b70aa86c497ab2b6928c5316cf33cb263d075d354',
+    'spr-chat-token-60c1edc94fe1cd452ceb20ba_app_950960': '',
+    'tfpsi': '79d7e215-f8f5-4799-a7f5-dcbe1d3b3612',
+    'sa_did': 'rWNSGpAwjbfCoDzIPYQrxayRihlEbdba',
+    'sa_773-397-549898': '{"US":{"status":"GRANTED","updated":"2025-02-10T17:53:03.067Z","clientId":"kv5di1wr19","deviceId":"rWNSGpAwjbfCoDzIPYQrxayRihlEbdba"}}',
+    '_ga_0JTZHYKZ5Z': 'GS1.1.1739209983.1.0.1739209983.60.0.0',
+    '_ga': 'GA1.1.1463971492.1739209983',
+    'RT': '"z=1&dm=samsung.com&si=31a8aefe-4683-41b4-bd9e-76847d64a02f&ss=m6zcplox&sl=2&tt=251&bcn=%2F%2F17de4c10.akstat.io%2F&ld=6qd&nu=kpaxjfo&cl=lzg"',
+    'glbState': 'GLB9v0o4yiojw8',
+    'returnURL': 'https%3A%2F%2Fwww.samsung.com%2Fus%2F',
+    's_tp_aep': '12805',
+    'OptanonConsent': 'isGpcEnabled=0&datestamp=Mon+Feb+10+2025+10%3A53%3A18+GMT-0700+(Mountain+Standard+Time)&version=202307.1.0&browserGpcFlag=0&isIABGlobal=false&hosts=&consentId=a6d0b020-b514-4205-8a66-868d9382c7ba&interactionCount=1&landingPath=https%3A%2F%2Fwww.samsung.com%2Fus%2F&groups=C0001%3A1%2CC0003%3A1%2CC0002%3A1%2CBG17%3A1%2CC0004%3A1',
+}
+
+headers = {
+    'Host': 'account.samsung.com',
+    'Connection': 'keep-alive',
+    'sec-ch-ua': '"Not A(Brand";v="8", "Chromium";v="132", "Google Chrome";v="132"',
+    'sec-ch-ua-mobile': '?0',
+    'sec-ch-ua-platform': '"macOS"',
+    'Upgrade-Insecure-Requests': '1',
+    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'Sec-Fetch-Site': 'same-site',
+    'Sec-Fetch-Mode': 'navigate',
+    'Sec-Fetch-User': '?1',
+    'Sec-Fetch-Dest': 'document',
+    'Referer': 'https://www.samsung.com/',
+    'Accept-Language': 'en-US,en;q=0.9',
+}
+
+params = {
+    'response_type': 'code',
+    'client_id': 'kv5di1wr19',
+    'locale': 'en_US',
+    'countryCode': 'US',
+    'redirect_uri': 'https://www.samsung.com/aemapi/v6/data-login/afterLogin.us.json',
+    'state': 'GLB9v0o4yiojw8',
+    'goBackURL': 'https://www.samsung.com/us/',
+    'scope': '',
+}
+
+response = requests.get(
+    'https://account.samsung.com/accounts/v1/samsung_com_us/signInGate',
+    params=params,
+    cookies=cookies,
+    headers=headers,
+    verify=False
+)
+
+print(response.cookies)

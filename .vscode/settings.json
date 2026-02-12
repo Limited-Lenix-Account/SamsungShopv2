@@ -1,0 +1,7 @@
+{
+    "discord.enabled": false,
+    "discord.detailsEditing": "Editing {total_lines} lines",
+    "discord.removeDetails": false,
+    "discord.removeLowerDetails": true,
+    "discord.swapBigAndSmallImage": true
+}
